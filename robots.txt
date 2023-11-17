@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://ahar.github.io/ahar.github.io/sitemap.xml
+Sitemap: https://ahar.github.io/sitemap.xml
