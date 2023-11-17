@@ -1,17 +1,14 @@
 ---
 layout: page
-title: project 4
+title: Localizability Estimation
 description: another without an image
-img:
+img: 
 importance: 3
 category: fun
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
-
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+In this project we aim to address the localization challenges in diverse indoor scenarios. A visibly aesthetic map of an environment does not necessarily guarantee reliable localization estimates everywhere within it. Factors such as different types of dynamism in the environment and quality of the sensor data used for localization play critical roles in determining the confidence in the localization accuracy. Often, the ground truth localization is not available. Therefore, a suitable measure of localization quality based on the local geometry of the environment 
+can be useful to identify the most appropriate mechanism to acheive a reliable navigation. Based on this hypothesis, we develop a robust real-time localizability estimation technique.
 
     ---
     layout: page
@@ -22,10 +19,10 @@ To give your project a background in the portfolio page, just add the img tag to
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/inlier_outlier.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/refined_surfel.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
@@ -36,7 +33,7 @@ To give your project a background in the portfolio page, just add the img tag to
 </div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/localizability_map.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
