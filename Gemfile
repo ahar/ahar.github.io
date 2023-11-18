@@ -21,6 +21,7 @@ group :jekyll_plugins do
     gem 'unicode_utils'
     gem 'webrick'
     gem 'faraday-retry'
+    gem 'jekyll-relative-links'
 end
 group :other_plugins do
     gem 'feedjira'
