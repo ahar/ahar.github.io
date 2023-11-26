@@ -6,30 +6,22 @@ img:
 importance: 3
 category: fun
 ---
-
-In this project we aim to address the localization challenges in diverse indoor scenarios. A visibly aesthetic map of an environment does not necessarily guarantee reliable localization estimates everywhere within it. Factors such as different types of dynamism in the environment and quality of the sensor data used for localization play critical roles in determining the confidence in the localization accuracy. Often, the ground truth localization is not available. Therefore, a suitable measure of localization quality based on the local geometry of the environment 
+<div class="row justify-content-sm-center">
+In this project we aim to address the localization challenges in diverse indoor scenarios. A visibly aesthetic map of an environment does not necessarily guarantee reliable localization estimates everywhere within it. Factors such as different types of dynamism in the environment and the quality of the sensor data used for localization play critical roles in determining the confidence in the localization accuracy. Often, the ground truth localization is not available. Therefore, a suitable measure of localization quality based on the local geometry of the environment 
 can be useful to identify the most appropriate mechanism to acheive a reliable navigation. Based on this hypothesis, we develop a robust real-time localizability estimation technique.
+</div>
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
-
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
+<div class="row justify-content-sm-center">
+    <div class="col-sm-6 mt-3 mt-md-0">
         {% include figure.html path="assets/img/inlier_outlier.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col-sm-6 mt-3 mt-md-0">
         {% include figure.html path="assets/img/refined_surfel.png" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
+    On the left, outliers and inliers in a sample point cloud are shown. Outlier removal is critical to estimate normals to local planes. Middle, the estimated normals are shown along with the point cloud.
+     <!-- Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles. -->
 </div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
