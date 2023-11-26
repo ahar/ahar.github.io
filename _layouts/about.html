@@ -54,23 +54,29 @@ layout: default
           {%- endif %}
 
           <!-- Selected papers -->
-          {% if page.selected_papers -%}
+          <!-- {% if page.selected_papers -%}
             <h2><a href="{{ '/publications/' | relative_url }}" style="color: inherit;">selected publications</a></h2>
             {%- include selected_papers.html %}
-          {%- endif %}
+          {%- endif %} -->
 
           <!-- Social -->
+
+          <!-- <a href="https://www.linkedin.com/in/your-profile-link">LinkedIn</a>  -->
           {%- if page.social %}
             <div class="social">
-              <div class="contact-icons">
+                          <a href="https://www.linkedin.com/in/anindya-harchowdhury" class="social-icon si-rounded si-small si-linkedin" target="_blank">
+              <i class="icon-linkedin"></i>
+           </a>
+              <!-- <div class="contact-icons">
                 {% include social.html %}
               </div>
 
               <div class="contact-note">
                 {{ site.contact_note }}
-              </div>
+              </div> -->
 
-            </div>
+            <!-- </div>  -->
+
           {%- endif %}
         </article>
 
