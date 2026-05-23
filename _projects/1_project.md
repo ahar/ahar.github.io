@@ -1,71 +1,36 @@
 ---
 layout: page
-title: Visual Inertial Odometry
-description: Vision-aided inertial odometry has been popular in autonomous robotics over the last decade. While high-precision FOG IMUs or its defense grade peers come at a higher cost, low cost IMUs are of interest to the autonomus ground robots and MAVs. 
-img: assets/img/vio_setup.jpg
+title: Sparse 3D LiDAR & Dynamic-Scene Planning
+description: PhD research on programmable 3D sensing, dynamic object estimation, and adaptive motion planning.
+img: assets/img/refined_surfel.png
 importance: 1
-category: work 
+category: research
 ---
- 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+## Problem
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal its glory in the next row of images.
+Autonomous robots operating in dynamic indoor environments must perceive, track, and plan around moving obstacles using cost-effective sensors — often sparse 3D data from modified 2D LiDAR rather than expensive multi-beam units.
 
+## Approach
+
+As part of my PhD at the **IIT Bombay–Monash University Research Academy**, I developed an end-to-end pipeline:
+
+- **Programmable 3D LiDAR** — nodding 2D LiDAR with reconfigurable mirrors for dense 3D coverage and faster scan updates than conventional 2D LiDAR
+- **Two-stage dynamic object estimation** — GMM-based real-time coarse tracking and shape estimation, followed by Kalman filtering for precise state estimation with arbitrary shape and motion primitives from sparse 3D data
+- **Adaptive BIT\*** — real-time motion planning among multiple dynamic obstacles in partially unknown environments
+- **Physics-based simulation** — evaluation framework for planning under varying obstacle density
+
+## Results
+
+- Publications in **IEEE RA-L / IROS 2018** and **Elsevier Mechatronics (2023)**
+- Presented at **IROS 2018**, Madrid (SDC travel grant)
+- Related work on anytime motion planning ([arXiv:1912.13461](https://arxiv.org/abs/1912.13461))
 
 <div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    <div class="col-sm-6 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/refined_surfel.png" title="Dynamic object shape estimation" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    <div class="col-sm-6 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/inlier_outlier.png" title="Sparse 3D point cloud processing" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-```
-{% endraw %}

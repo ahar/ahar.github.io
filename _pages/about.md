@@ -2,25 +2,28 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>PhD</a>. specializes in Robotic Perception and Non-linear conntrol Theory.
+subtitle: PhD (IIT Bombay–Monash) · Senior Technical Lead, Robotics & Embodied AI · SLAM · Localization · Sim2Real
 
 profile:
   align: right
   image: ani_photo.png
-  image_circular: false # crops the image to make it circular
-  more info: >
-    <p>Novus Hi-Tech Robotic Systems LTD.</p>
-    <p>A-18, InfoCity-1, Gurgaon</p>
-    <p>Haryana-122001</p>
+  image_circular: false
+  more_info: >
+    <p>Senior Technical Lead</p>
+    <p><a href="https://novushitech.com/">Novus Hi-Tech</a></p>
+    <p>Gurugram, India</p>
 
-news: true  # includes a list of news items
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true  # includes social icons at the bottom of the page
+news: true
+selected_papers: true
+social: true
 ---
 
-I am currenetly working as a Technical Lead in Novus Hi-Tech Robotic Systems LTD. I work on multi-modal sensory perception for autonomous mobile robots. For the past approximately two and a half years I have been working on Mapping and Localization for mobile robots deployed in large warehouse and manufacturing sites. 
+I build autonomous robotic systems spanning **perception, localization, navigation, motion planning, and embodied AI** — from research prototypes to production deployments on humanoid, mobile, and off-road platforms.
 
-Prior to joing at [NHRSL](https://novushitech.com/), I completed my PhD from IITB-Monash Research Academy, through a joint Doctoral program offered by [IIT Bombay](https://www.iitb.ac.in/) and [Monash University](https://www.monash.edu/). For latest research publication update, please visit [Google Scholar](https://scholar.google.co.in/citations?user=PTq-MC0AAAAJ&hl=en). Please check my [GitHub](https://github.com/ahar) for latest software commit/releases. 
-<!-- Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically. -->
+I am currently **Senior Technical Lead** at [Novus Hi-Tech](https://novushitech.com/), where I lead robotics AI stacks including humanoid/mobile manipulation, fail-safe GPS-denied localization, off-road autonomous navigation, and scalable **ROS 2** software infrastructure. I invented **RBLAM** (reflector-based localization and mapping), deployed at multiple industrial customer sites, and led India's first off-road autonomous navigation system for a tracked platform (DRDO) with multi-modal fusion (LiDAR, EO/IR, IMU), elevation mapping, and predictive control.
 
-<!-- Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them. -->
+**Research background:** MS (Research) from [IIT Kharagpur](https://www.iitkgp.ac.in/) (ISRO-sponsored satellite AIS simulation) and PhD from the [IIT Bombay–Monash University](https://www.iitbmonash.org/) Research Academy on sparse 3D sensing, dynamic object tracking, and perception-aware motion planning. Publications in **IEEE RA-L**, **IROS**, and **Elsevier Mechatronics**.
+
+**Research interests:** robust localization and SLAM in dynamic environments, multi-modal sensor fusion, visual-inertial odometry, embodied AI, Sim2Real, and learning-enhanced state estimation.
+
+For the latest publications, see [Google Scholar](https://scholar.google.com/citations?user=PTq-MC0AAAAJ&hl=en). Selected software is on [GitHub](https://github.com/ahar).

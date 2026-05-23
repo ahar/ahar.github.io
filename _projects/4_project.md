@@ -1,69 +1,52 @@
 ---
 layout: page
-title: Localizability Estimation
-description: another without an image
-img: 
-importance: 3
-category: fun
+title: Localizability-Aware Fail-Safe Localization
+description: R&D lead for a novel localizability estimation module enabling robust multi-modal localization in dynamic indoor environments.
+img: assets/img/localizability_map.png
+importance: 2
+category: industry
 ---
-<div class="row justify-content-sm-center">
-In this project we aim to address the localization challenges in diverse indoor scenarios. A visibly aesthetic map of an environment does not necessarily guarantee reliable localization estimates everywhere within it. Factors such as different types of dynamism in the environment and the quality of the sensor data used for localization play critical roles in determining the confidence in the localization accuracy. Often, the ground truth localization is not available. Therefore, a suitable measure of localization quality based on the local geometry of the environment 
-can be useful to identify the most appropriate mechanism to acheive a reliable navigation. Based on this hypothesis, we develop a robust real-time localizability estimation technique.
-</div>
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-6 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/inlier_outlier.png" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-6 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/refined_surfel.png" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    On the left, outliers and inliers in a sample point cloud are shown. Outlier removal is critical to estimate normals to local planes. Middle, the estimated normals are shown along with the point cloud.
-     <!-- Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles. -->
-</div>
+## Problem
+
+A visually appealing map does not guarantee reliable localization everywhere within it. Scene dynamism, sensor quality, and local geometry all affect localization confidence — yet ground truth is rarely available at runtime in deployed AMRs.
+
+## Approach
+
+I led R&D for a **localizability estimation** module as part of a fault-tolerant localization provider for GPS-denied natural navigation:
+
+- Real-time assessment of **localization quality** from local geometric structure
+- Guides judicious fusion of **visual, LiDAR, and IMU** odometry streams
+- Combined with **map quality estimation** (RGB-D and LiDAR maps)
+- Architecture owner for the full fail-safe localization project across warehouses, manufacturing sites, hospitals, and malls
+
+## Results
+
+- Novel localizability module found **highly effective** for GPS-denied natural navigation
+- Enables proactive modality switching before localization failure
+- Supports continuous operation under diverse scene dynamism and surface conditions
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/localizability_map.png" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/localizability_map.png" title="Localizability map" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    This image can also have a caption. It's like magic.
+    Localizability estimation identifies regions where localization is reliable vs. degenerate, enabling adaptive sensor fusion.
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal its glory in the next row of images.
-
-
 <div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    <div class="col-sm-6 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/inlier_outlier.png" title="Inlier and outlier points" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    <div class="col-sm-6 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/refined_surfel.png" title="Surface normal estimation" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
+    Outlier-robust plane fitting and normal estimation support geometry-aware localizability analysis.
 </div>
 
+## Technologies
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-```
-{% endraw %}
+ROS 2 · Multi-modal odometry · Map quality estimation · Point cloud geometry · Sensor fusion

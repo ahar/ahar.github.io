@@ -2,10 +2,10 @@
 layout: page
 title: research
 permalink: /research/
-description: A growing collection of your cool projects.
+description: Selected research and industry projects in robotic perception, localization, and autonomous navigation.
 nav: true
 nav_order: 2
-display_categories: [work, fun]
+display_categories: [research, industry]
 horizontal: false
 ---
 
